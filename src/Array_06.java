@@ -9,11 +9,10 @@ public class Array_06 {
 
         Scanner ler = new Scanner(System.in);
 
-        String[] nomes = new String[2];
+        String[] nomes = new String[10];
         float[] notas = new float[4];
         float soma = 0, media;
         ArrayList<Float> mediaAlunos = new ArrayList<Float>();
-        ArrayList<String> nomeAlunos = new ArrayList<String>();
         int alunosM7 = 0;
 
         for (int i = 0; i < nomes.length; i++) {
