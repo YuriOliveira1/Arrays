@@ -16,27 +16,27 @@ public class Array_06 {
         ArrayList<String> nomeAlunos = new ArrayList<String>();
         int alunosM7 = 0;
 
-        for (int i = 0; i < nomes.length; i++){
+        for (int i = 0; i < nomes.length; i++) {
             System.out.print("Nome do Aluno: ");
             nomes[i] = ler.nextLine();
 
-            for (int j = 0; j < notas.length; j++){
+            for (int j = 0; j < notas.length; j++) {
                 System.out.print("Notas: ");
                 notas[i] = ler.nextFloat();
                 soma += notas[i];
-                media = soma / 4;
-                System.out.println(media);
-                if (media > 7.0){
-                    nomeAlunos.add(nomes[i]);
-                    mediaAlunos.add(media);
-                    alunosM7++;
-                }
             }
+
+            media = soma / 4;
+
+            if (media > 7.0) {
+                alunosM7++;
+            }
+
+            mediaAlunos.add(media);
+            soma = 0;
             ler.nextLine();
         }
-        for (int i = 0; i < notas.length; i++){
-            System.out.print(+notas[i]+", ");
-        }
-        System.out.println(mediaAlunos);
+        System.out.println("Lista das media dos 10 Alunos: "+mediaAlunos);
+        System.out.println("Existem "+alunosM7+ " Alunos com acima da media 7.0.");
     }
 }
